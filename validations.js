@@ -1,5 +1,5 @@
 function isBaseInRange(base) {
-    const base = parseInt(base);
+    base = parseInt(base);
 
     if (base < 2 || base > 13) {
         return false;
