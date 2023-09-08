@@ -8,9 +8,9 @@
 <body>
     <fieldset>
         <legend>Cambio de Bases</legend>
-        <form action="cambio.php" method="post">
-            <label for="numero">Numero</label>
-            <input type="text" name="numero" id="numero">
+        <form action="cambio.php">
+            <label for="number">Numero</label>
+            <input type="text" name="number" id="number">
             <br>
             <label for="inital-base">Base Inicial</label>
             <input type="number" name="inital-base" id="inital-base" min="2" max="13">
@@ -18,7 +18,7 @@
             <label for="final-base">Base Final</label>
             <input type="number" name="final-base" id="final-base" min="2" max="13">
             <br>
-            <input type="submit" value="Enviar">
+            <button type="button">Calcular</button>
         </form>
     </fieldset>
 </body>
