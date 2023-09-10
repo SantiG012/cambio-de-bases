@@ -3,9 +3,5 @@ function getNumber() {
 }
 
 function getInitalBase() {
-    return document.getElementById('initial-base').value;
+    return document.getElementById('inital-base').value;
 }
-
-function getFinalBase() {
-    return document.getElementById('final-base').value;
-}   
