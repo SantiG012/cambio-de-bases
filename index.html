@@ -12,14 +12,19 @@
             <label for="number">Numero</label>
             <input type="text" name="number" id="number">
             <br>
-            <label for="inital-base">Base Inicial</label>
-            <input type="number" name="inital-base" id="inital-base" min="2" max="13">
+
+            <label for="initial-base">Base Inicial</label>
+            <input type="number" name="initial-base" id="initial-base" min="2" max="13">
             <br>
-            <label for="final-base">Base Final</label>
-            <input type="number" name="final-base" id="final-base" min="2" max="13">
-            <br>
-            <button type="button">Calcular</button>
+            
+            <button type="button" onClick="calculate()" >Calcular</button>
         </form>
     </fieldset>
+    <script src="Constants/constants.js"></script>
+    <script src="validations.js"></script>
+    <script src="main.js"></script>
+    <script src="utils.js" ></script>
+    <script src="convertion.js"></script>
+    <script src="getters.js"></script>
 </body>
 </html>
