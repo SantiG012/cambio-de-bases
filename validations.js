@@ -1,7 +1,7 @@
 function isBaseInRange(base) {
     base = parseInt(base);
 
-    if (base < 2 || base > 13) {
+    if (base < 2 || base > 16) {
         return false;
     }
 

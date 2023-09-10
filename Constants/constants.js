@@ -24,3 +24,12 @@ const LETTERS_EQUIVALENCE = {
     "E":14,
     "F":15,
 }
+
+const NUMBER_EQUIVALENCE = {
+    10:"A",
+    11:"B",
+    12:"C",
+    13:"D",
+    14:"E",
+    15:"F",
+}
