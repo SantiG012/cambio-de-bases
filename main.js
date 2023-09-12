@@ -47,7 +47,9 @@ function calculate(){
 
     const decimalNumber = convertNumberToDecimalBase(number, initialBase);
 
-    const finalNumber = convertDecimalToAnyBase(decimalNumber, 16);
 
-    console.log(decimalNumber, finalNumber);
+    for (let i = 2; i < 17; i++) {
+        const result = convertDecimalToAnyBase(decimalNumber, i);
+        printConvertionResults(result, i);
+    }
 }
