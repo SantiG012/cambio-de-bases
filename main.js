@@ -7,7 +7,7 @@ function getNeededValues() {
     initialBase = getInitalBase();
 }
 
-function convertNumberToDecimal(number, base) {
+function convertNumberToDecimalBase(number, base) {
     const dividedNumber =  number.split('.');
     let decimalResult = 0;
 
@@ -17,7 +17,22 @@ function convertNumberToDecimal(number, base) {
         decimalResult += convertFloatPartToDecimalPart(dividedNumber[1], base);
     }
 
-    return decimalResult;
+    return decimalResult.toString();
+}
+
+function convertDecimalToAnyBase(decimalNumber, base) {
+    let dividedNumber = decimalNumber.split('.');
+    let result = "";
+    const intPart = dividedNumber[0];
+    const floatPart = Number('.'+dividedNumber[1]);
+
+    result = convertIntPartToAnyBase(intPart, base);
+    
+    if (dividedNumber.length !== 1) {
+        result += "." + convertFloatPartToAnyBase(floatPart, base);
+    }
+
+    return result;
 }
 
 function calculate(){
@@ -30,7 +45,9 @@ function calculate(){
         return;
     }
 
-    const decimalNumber = convertNumberToDecimal(number, initialBase);
+    const decimalNumber = convertNumberToDecimalBase(number, initialBase);
 
-    console.log(decimalNumber);
+    const finalNumber = convertDecimalToAnyBase(decimalNumber, 16);
+
+    console.log(decimalNumber, finalNumber);
 }

@@ -40,3 +40,53 @@ function convertFloatPartToDecimalPart(floatNumber,initialBase){
     return decimalNumber;
 
 }
+
+function convertIntPartToAnyBase(decimalNumber, finalBase){
+    let finalNumber = [];
+    let quotient = decimalNumber;
+    let digit = 0;
+
+    do{
+        digit = quotient % finalBase;
+
+        quotient = Math.floor(quotient / finalBase);
+
+        if(digit>9){
+            digit = convertNumberIntoLetter(digit);
+        }
+
+        finalNumber.unshift(digit);
+
+    }while(quotient > 0);
+
+    return finalNumber.join('');
+}
+
+function convertFloatPartToAnyBase(floatNumber, finalBase){
+    let finalNumber = "";
+    const multiplier = finalBase;
+    let digit = 0;
+    let product = 0;
+    let precision = 0;
+
+    console.log(floatNumber);
+
+    do{
+        product = floatNumber * multiplier;
+        digit = Math.floor(product);
+        floatNumber = product - digit;
+
+        console.log(product, digit, floatNumber);
+
+        if(digit>9){
+            digit = convertNumberIntoLetter(digit);
+        }
+
+        finalNumber += digit;
+
+        precision++;
+    }while(floatNumber > 0 && precision < 10);
+
+    return finalNumber;
+
+}
